@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #0d1116;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.logo-name {
+    font-size: 15px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Para evitar o overflow se o conteúdo for maior */
+    
+}
+
+.sidebar {
+    background-color: #0d1116;
+    width: 250px;
+    min-height: calc(100vh - 50px); /* Ajuste conforme a altura do cabeçalho */
+    padding: 30px;
+    position: relative;
+}
+
+.text_1 {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #686666;
+    align-items: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #0d1116;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #fff;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a:focus {
+    background-color: #1a222c;
+    color: #fff;
+}
+
+main {
+    flex: 1; /* Para que o main ocupe o espaço restante */
+    padding: 20px;
+    background-color: #1a222c; /* Adicione um fundo para contraste, se necessário */
+    overflow: auto; /* Para garantir que o conteúdo não ultrapasse */
+}
+
+/* apartir daqui  */
+.main-content {    
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    box-sizing: border-box; /* Inclui padding na altura */
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+}
+
+.container-main {
+    padding: 20px;
+    width: 100%; /* Use toda a largura disponível */
+    max-width: 800px; /* Limita a largura máxima */
+    flex-direction: column;
+    height: 100%; /* Use toda a altura disponível */
+}
+
+
+.container-main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.container-main label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    
+}
+
+.container-main textarea {
+    flex-grow: 1;
+    resize: none;
+    background-color: #0d1116;
+    color: #fff;
+    border: 1px solid #575757;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box; /* Inclui padding no tamanho */
+    margin-bottom: 15px;
+    width: 100%; /* Use toda a largura disponível */
+
+
+}
+
+.container-main input[type="range"],
+.container-main select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color: #0d1116;
+    color: #fff;
+    border: 1px solid #575757;
+    border-radius: 5px;
+}
+.container-main input[type="checkbox"] {
+    margin-right: 5px;
+    
+}
+.container-main button {
+    width: 100%;
+    padding: 10px;
+    /* background-color: #575757; */
+    background-color: #0d1116;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-main button:hover {
+    background-color: #444;
+}

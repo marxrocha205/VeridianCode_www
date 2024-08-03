@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Texto</title>
+    <link rel="stylesheet" href="../static/css/image_sem_menu_styles.css">
+    
+</head>
+<body>
+    <div class="aplica-padd">
+        <div class="container">
+            <h2   h2>Solicitação:</h2>
+            <div>
+                <textarea placeholder="Digite aqui..." rows="1" oninput="autoGrow(this)"></textarea>
+                <button>Enviar</button>
+            </div>
+            <div class="image-container">
+                <img src="../static/images/passarinho.jpg" alt="Imagem">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function autoGrow(element) {
+            element.style.height = "20px";
+            element.style.height = (element.scrollHeight) + "px"; 
+        }
+    </script>
+</body>
+</html>
