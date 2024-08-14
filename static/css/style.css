@@ -38,25 +38,46 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-
     flex: 1;
     overflow: hidden; /* Para evitar o overflow se o conteúdo for maior */
 }
 
 .sidebar {
     background-color: #0d1116;
-    width: 250px;
+    /* width: 250px; Definido para telas grandes */
     min-height: calc(100vh - 50px); /* Ajuste conforme a altura do cabeçalho */
     padding: 30px;
     position: relative;
+    transition: width 0.3s ease; /* Adiciona uma transição suave */
 }
 
-.text_1 {
-    font-size: 15px;
-    font-weight: 100;
-    margin-bottom: 20px;
-    color: #686666;
-    align-items: center;
+/* Oculta o texto "I.A Generator" em telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para layout vertical */
+    }
+
+    .sidebar {
+        width: 100%; /* Torna o menu lateral ocupar toda a largura */
+        min-height: auto; /* Remove a altura mínima */
+        padding: 0px;
+        position: relative;
+        display: flex;
+        overflow-x: auto; /* Permite rolagem horizontal */
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-direction: row; /* Exibe itens em linha */
+    }
+
+    .sidebar nav ul li {
+        margin: 0 5px; /* Margem reduzida para itens em linha */
+    }
+
+    .text_1 {
+        display: none; /* Oculta o texto "I.A Generator" em telas menores */
+    }
 }
 
 .sidebar nav ul {
